@@ -1,0 +1,36 @@
+---
+# Create new instance on Proxmox - node1
+- proxmox:
+    vmid: '100'
+    api_user: 'root'
+    api_password: '123456'
+    api_host: node1
+    hostname: centos100.local
+    ostemplate: 'local:vztmpl/centos-7-default_20171212_amd64.tar.xz'
+    type: 'centos'
+    memory: '8192'
+    disk: '80'
+    cores: '2'
+    format: raw
+    onboot: 'yes'
+    state: 'present'
+    netif: '{"net0":"name=eth0,gw=192.168.1.1,ip=192.168.1.10/24,bridge=vmbr0"}'
+    nameserver: '192.168.1.1'
+
+# Create new instance on Proxmox - node1
+- proxmox:
+    vmid: '101'
+    api_user: root
+    api_password: '123456'
+    api_host: node1
+    hostname: centos101.local
+    ostemplate: 'local:vztmpl/centos-7-default_20171212_amd64.tar.xz'
+    type: 'centos'
+    memory: '8192'
+    disk: '80'
+    cores: '2'
+    format: raw
+    onboot: 'yes'
+    state: 'present'
+    netif: '{"net0":"name=eth0,gw=192.168.1.1,ip=192.168.1.11/24,bridge=vmbr0"}'
+    nameserver: '192.168.1.1'
