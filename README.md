@@ -1,3 +1,3 @@
-ansible-playbooks
+ansible-playbook
 
-A collection of basic playbooks designed to aid in testing ansible functionality.
+Test for ansible-playbook: creating 2 virtual machines (centos) and for each machine install docker.
